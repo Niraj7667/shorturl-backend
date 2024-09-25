@@ -25,7 +25,12 @@ app.use('/api', urlRoutes);
 app.use('/api', apiRoutes);
 app.use('/delete', deleteRoute);
 app.use('', shorty);
-app.get("/", async (req, res) => {
+app.get("/", async (res) => {
+    return res.status(201).json({
+        msg: "Hello world"
+    });
+});
+app.get("/info", async (req, res) => {
     const data = await prisma.url.findMany({});
     return res.status(201).json({
         msg: "Success",

@@ -15,7 +15,7 @@ export const isAuthenticated = async (req: Request, res: Response, next: NextFun
       if (!decoded.userId) {
         return res.status(401).json({ message: 'Unauthorized - Missing userId in token' });
       }
-
+       
       // Fetch the user using the user ID from the token
       req.user = await prisma.user.findUnique({
         where: { id: decoded.userId },

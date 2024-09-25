@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch ./server.ts",
-    "build": "tsc && git status && git add ."
+    "build": "tsc && git status && git add .",
+    "start": "node build/server.js"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +22,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "ejs": "^3.1.9",
-    "express": "^4.18.2",
+    "express": "^4.21.0",
     "express-ejs-layouts": "^2.5.1",
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
@@ -29,14 +30,14 @@
     "nanoid": "^5.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tsx": "^4.7.0"
+    "tsx": "^4.7.0",
+    "typescript": "^5.6.2"
   },
   "devDependencies": {
     "@types/dotenv": "^8.2.0",
     "@types/ejs": "^3.1.5",
     "@types/express-ejs-layouts": "^2.5.4",
     "@types/fs-extra": "^11.0.4",
-    "@types/node": "^20.10.5",
     "@types/shelljs": "^0.8.15",
     "fs-extra": "^11.2.0",
     "nodemon": "^3.0.2",
@@ -44,7 +45,6 @@
     "prisma": "^5.7.1",
     "rimraf": "^5.0.5",
     "shelljs": "^0.8.5",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "ts-node": "^10.9.2"
   }
 }

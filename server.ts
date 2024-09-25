@@ -32,9 +32,15 @@ app
   app.use('/delete',deleteRoute);
   app.use('',shorty);
 
+  app.get("/", async (res: Response) => {
   
+     return res.status(201).json({
+      msg: "Hello world"
+  })
+});
 
-app.get("/", async (req: Request, res: Response) => {
+
+app.get("/info", async (req: Request, res: Response) => {
   const data = await prisma.url.findMany({});
 
   return res.status(201).json({
