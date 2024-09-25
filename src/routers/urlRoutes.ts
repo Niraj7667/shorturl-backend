@@ -1,6 +1,5 @@
 import express from "express";
 import { shorten} from "src/controllers/urlRoutes";
-import { isAuthenticated } from "src/middlewares/isAuthenticate";
 import { getUserUrls } from "src/controllers/getUserUrls";
 import { shortenMiddleware } from "src/middlewares/shorten";
 const router = express.Router();

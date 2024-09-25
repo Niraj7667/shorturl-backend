@@ -113,7 +113,7 @@ export const signup = async (req: Request, res: Response) => {
   
   
   // Logout route
-  export const logout = (req: Request, res: Response) => {
+  export const logout = (res: Response) => {
     // Clear the JWT cookie on logout
     res.clearCookie("jwt");
     return res.json({ message: "Logout successful" });

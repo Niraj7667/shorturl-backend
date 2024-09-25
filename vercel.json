@@ -1,0 +1,31 @@
+{
+    "version": 2,
+    "builds": [
+      {
+          "src": "server.ts",
+          "use": "@vercel/node"
+        },
+      {
+        "src": "server.ts",
+        "use": "@vercel/node"
+      },
+      {
+        "src": "src/index.html",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+          "src": "/(.*)",
+          "dest": "server.ts"
+        },
+      {
+        "src": "/api/(.*)",
+        "dest": "/server.ts"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/src/index.html"
+      }
+    ]
+  }
