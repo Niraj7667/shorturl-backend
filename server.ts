@@ -50,6 +50,5 @@ app.listen(PORT, () => {
   console.log(`Service active on PORT ${PORT}`);
 });
 
-export default app;
 
 

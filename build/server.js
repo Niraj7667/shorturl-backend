@@ -36,4 +36,3 @@ app.get("/", async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Service active on PORT ${PORT}`);
 });
-export default app;
