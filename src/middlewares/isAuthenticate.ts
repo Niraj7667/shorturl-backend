@@ -10,7 +10,6 @@ export const isAuthenticated = async (req: Request, res: Response, next: NextFun
     try {
       // Verify JWT token
       const decoded: any = jwt.verify(token, process.env.JWT_SECRET_KEY);
-      console.log("Decoded token:", decoded); // Log the decoded token
 
       // Check if decoded contains userId
       if (!decoded.userId) {
@@ -22,7 +21,6 @@ export const isAuthenticated = async (req: Request, res: Response, next: NextFun
         where: { id: decoded.userId },
       });
 
-      console.log("Queried User:", req.user); // Log the user object
 
       if (!req.user) {
         // User not found, respond with 401 Unauthorized

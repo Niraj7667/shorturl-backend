@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch ./server.ts",
-    "build": "tsc"
+    "build": "tsc && git status && git add ."
   },
   "keywords": [],
   "author": "",
